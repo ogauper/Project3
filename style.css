@@ -1,0 +1,19 @@
+//Orrin Gauper
+
+p > span {
+  opacity: 0.0;
+}
+
+span.shown-message{
+  opacity: 1.0;
+}
+body{
+  background-color: darkgrey;
+  text-decoration: none;
+  font-family: "Verdana",Arial, monospace;
+
+}
+
+span.Question{
+  font-size: 20px;
+}
