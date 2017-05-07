@@ -34,7 +34,7 @@ function Submit(){
   list.appendChild(h);
   var x = document.createTextNode("A. " + Qarray[0].answers[0]);
   p.appendChild(x);
-  h.appendChild(p); */
+  h.appendChild(p); */ 
 
   document.getElementById("Qtext").value = "";
   document.getElementById("Op1").value = "";
