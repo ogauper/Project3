@@ -1,33 +1,16 @@
 <!DOCTYPE html>
-<html><!--Orrin Gauper -->
+<html>
   <head>
     <meta charset="utf-8" />
     <!-- BOOTSTRAP (style only)-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css" />
-    <title>Page 2</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"
+      <title>Quiz Maker</title>
     <script type="text/javascript" src="project.js"></script>
   </head>
-  <body lang="en-US">
-    <span class="Question">
-      <h1> Puzzle #2 </h1>
-      <p> 2 + 3 = 5 </p>
-      <p> 7 + 11 = 13 </p>
-      <p> 17 + 19 = 23 </p>
-      <p> 29 + 31 = 37 </p>
-      <p> 31 + 37 = 41 </p>
-      <p> 43 + 47 =
-        <input type="text" id="answer2" oninput="validate2();" />
-     </p>
-   </span>
-   <span id = "answer2success">
-   </span>
-   <span id = "answer2error">
-   </span>
-   <input type="button" onclick="location.href='index.html';" value="Prev" />
-   <input type="button" onclick="location.href='page3.html';" value="Next" />
-
+  <body onload = "Load()" lang="en-US">
+    <div class="col-sm-4">
+      <ol id="listDisplay">
+      </ol>
+    </div>
 
   </body>
-
-</html>
