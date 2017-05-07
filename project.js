@@ -21,7 +21,7 @@ function Submit(){
   var option3 = document.getElementById("Op3").value;
   var answer = document.getElementById("ans").value;
   var array = [option1, option2, option3, answer ];
-  Qarray[count] = new question(qtext, array);
+  //Qarray[count] = new question(qtext, array);
 
   window.localStorage.setItem('qtext', document.getElementById("Qtext").value );
   var obj =  window.localStorage.getItem('qtext');
