@@ -24,7 +24,7 @@ function Submit(){
   Qarray[count] = new question(qtext, array);
 
   window.localStorage.setItem('qtext', document.getElementById("Qtext").value );
-  var obj =  window.localStorage.getItem(Qarray[0]);
+  var obj =  window.localStorage.getItem('qtext');
   count = count + 1;
   /*var h = document.createElement("li");
   var p = document.createElement("p");
@@ -79,7 +79,7 @@ function Load(){
   //var newarray = localStorage.getItem(Qarray[0]);
     var h = document.createElement("li");
   var p = document.createElement("p");
-  var t = document.createTextNode(localStorage.getItem(Qarray[0]));
+  var t = document.createTextNode('qtext');
   var list = document.getElementById("listDisplay");
   h.appendChild(t);
   list.appendChild(h)
