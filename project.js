@@ -76,6 +76,12 @@ function Done(){
 
 function Load(){
   //var make = getCookie("Cookie");
-  var newarray = localStorage.getItem(Qarray[0]);
+  //var newarray = localStorage.getItem(Qarray[0]);
+    var h = document.createElement("li");
+  var p = document.createElement("p");
+  var t = document.createTextNode(localStorage.getItem(Qarray[0]));
+  var list = document.getElementById("listDisplay");
+  h.appendChild(t);
+  list.appendChild(h)
 }
 
