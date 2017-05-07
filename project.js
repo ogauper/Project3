@@ -79,7 +79,7 @@ function Load(){
   //var newarray = localStorage.getItem(Qarray[0]);
     var h = document.createElement("li");
   var p = document.createElement("p");
-  var t = document.createTextNode('qtext');
+  var t = document.createTextNode(localStorage.getItem('qtext'));
   var list = document.getElementById("listDisplay");
   h.appendChild(t);
   list.appendChild(h)
