@@ -10,7 +10,7 @@ function question(qtext, array){
 }
 
 function Submit(){
-  var qtext = document.getElementById("Qtext").value;
+  //var qtext = document.getElementById("Qtext").value;
   //localStorage.qtext = document.getElementById("Qtext").value;
   //setCookie("qtext", document.getElementById("Qtext").value, 100);
   //setCookie("option1", document.getElementById("Op1").value, 100);
@@ -23,7 +23,7 @@ function Submit(){
   var array = [option1, option2, option3, answer ];
   Qarray[count] = new question(qtext, array);
 
-  window.localStorage.setItem(Qarray[0],JSON.stringify(Qarray[0]));
+  window.localStorage.setItem('qtext', document.getElementById("Qtext").value );
   var obj =  window.localStorage.getItem(Qarray[0]);
   count = count + 1;
   /*var h = document.createElement("li");
