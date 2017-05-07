@@ -1,82 +1,49 @@
 //Orrin Gauper
 
 var count = 0;
-var y = 0;
-var x = 0;
+var Qarray = [];
 
-function validate1(){
-var entered = document.getElementById("answer1").value;
-  if (entered == 27)
-  {
-    document.getElementById("answer1success").innerHTML = "Correct Answer!";
-    var Output = document.getElementById("Feedback");
-    x = document.getElementById("answer1error");
-    y = document.getElementById("answer1success");
-    Output.removeChild(x);
-    Output.appendChild(y);
-
-
-
-    //document.getElementById("answer1error").classlist.add("shown-message");
-
-
-    count = count + 1;
-    setCookie("AmntCorrect", count, 100);
-  }
-
-  else
-  {
-
-    document.getElementById("answer1error").innerHTML = "Wrong Answer!";
-
-    var Output = document.getElementById("Feedback");
-    y = document.getElementById("answer1success");
-    x = document.getElementById("answer1error");
-
-    Output.removeChild(y);
-     Output.appendChild(x);
-
-
-  }
+function question(qtext, array){
+    this.quest = qtext;
+    this.answers = array;
 
 }
 
-function validate2(){
-  var entered2 = document.getElementById("answer2").value;
+function Submit(){
+  var qtext = document.getElementById("Qtext").value;
+  //localStorage.qtext = document.getElementById("Qtext").value;
+  //setCookie("qtext", document.getElementById("Qtext").value, 100);
+  //setCookie("option1", document.getElementById("Op1").value, 100);
+  //setCookie("option2", document.getElementById("Op2").value, 100);
+  //setCookie("option3", document.getElementById("Op3").value, 100);
+  var option1 = document.getElementById("Op1").value;
+  var option2 = document.getElementById("Op2").value;
+  var option3 = document.getElementById("Op3").value;
+  var answer = document.getElementById("ans").value;
+  var array = [option1, option2, option3, answer ];
+  Qarray[count] = new question(qtext, array);
 
-  if (entered2 == 53)
-  {
+  window.localStorage.setItem(Qarray[0],JSON.stringify(Qarray[0]));
+  var obj =  window.localStorage.getItem(Qarray[0]);
+  count = count + 1;
+  /*var h = document.createElement("li");
+  var p = document.createElement("p");
+  var t = document.createTextNode(Qarray[0].quest);
+  var list = document.getElementById("listDisplay");
+  h.appendChild(t);
+  list.appendChild(h);
+  var x = document.createTextNode("A. " + Qarray[0].answers[0]);
+  p.appendChild(x);
+  h.appendChild(p); */
 
-    Number(getCookie("AmntCorrect"));
-    document.getElementById("answer2success").innerHTML = "Correct Answer!";
-    count = Number(getCookie("AmntCorrect")) + 1;
-    setCookie("AmntCorrect", count, 100);
-  }
-
-  else
-  {
-     document.getElementById("answer2error").innerHTML = "Wrong Answer!";
-  }
-
+  document.getElementById("Qtext").value = "";
+  document.getElementById("Op1").value = "";
+  document.getElementById("Op2").value = "";
+  document.getElementById("Op3").value = "";
+  document.getElementById("ans").value = "";
 }
 
-function validate3(){
-  var entered3 = document.getElementById("answer3").value;
 
-  if (entered3 == 9)
-  {
-    document.getElementById("answer3success").innerHTML = "Correct Answer!";
-    count = Number(getCookie("AmntCorrect"))+ 1;
-    setCookie("AmntCorrect", count, 100);
-  }
-
-  else
-  {
-    document.getElementById("answer3success").remove;
-    document.getElementById("answer3error").innerHTML = "Wrong Answer!";
-  }
-
-}
 
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
@@ -98,17 +65,17 @@ function getCookie(cname) {
             return c.substring(name.length, c.length);
         }
     }
-    return "0";
+    return "";
 }
 
-function Reset(){
-  count = 0;
-  setCookie("AmntCorrect", count, 100);
-
+function Done(){
+  //setCookie("Cookie", Qarray[0].quest, 100);
+  window.location = 'page2.html';
+ //var make = localStorage.getItem(Qarray[0]);
 }
 
-function calculate_Score(){
-        var Showscore = getCookie("AmntCorrect");
-        Showscore = (Showscore / 3 * 100).toFixed(2) + "%";
-        alert("Your score is: " + Showscore);
+function Load(){
+  //var make = getCookie("Cookie");
+  var newarray = localStorage.getItem(Qarray[0]);
 }
+
