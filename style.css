@@ -1,19 +1,28 @@
-//Orrin Gauper
-
-p > span {
-  opacity: 0.0;
-}
-
-span.shown-message{
-  opacity: 1.0;
-}
 body{
-  background-color: darkgrey;
-  text-decoration: none;
-  font-family: "Verdana",Arial, monospace;
-
+  background-color: 	 #c2c2d6;
+  
+  font-family: Verdana, Geneva, sans-serif;
 }
 
-span.Question{
-  font-size: 20px;
+input {
+
+    float : right;
+}
+
+div {
+  padding: 5px;
+}
+
+button {
+  horizontal-align: right;
+}
+
+input[type=text]:focus {
+    border: 3px solid #555;
+    overflow: scroll;
+}
+
+form > ol {
+  padding: 5px;
+  border-bottom: groove;
 }
